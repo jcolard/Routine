@@ -1,0 +1,460 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-elevated: #334155;
+  --border-color: #334155;
+  --border-subtle: #1e293b;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  --primary-accent: #38bdf8;
+  --primary-accent-bg: rgba(56, 189, 248, 0.12);
+
+  --slot-bg: #1e293b;
+  --slot-border: #334155;
+  --slot-text: #e2e8f0;
+  
+  --slot-active-bg: #15803d;
+  --slot-active-bg-gradient: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  --slot-active-border: #22c55e;
+  --slot-active-text: #ffffff;
+  --slot-active-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+
+  --slot-red-bg-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  --slot-red-border: #f87171;
+  --slot-red-text: #ffffff;
+  --slot-red-shadow: 0 4px 12px rgba(239, 68, 68, 0.28);
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+/* Header */
+.app-header {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-install {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  transition: all 0.15s ease;
+}
+
+.btn-install:active {
+  transform: scale(0.96);
+}
+
+.app-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-today {
+  background: var(--primary-accent-bg);
+  color: var(--primary-accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-today:active {
+  transform: scale(0.96);
+  background: rgba(56, 189, 248, 0.22);
+}
+
+/* Week Nav */
+.week-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.nav-arrow {
+  background: var(--bg-surface-elevated);
+  border: none;
+  color: var(--text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-arrow:active {
+  transform: scale(0.92);
+  background: var(--border-color);
+}
+
+.week-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.week-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.week-dates {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Progress */
+.progress-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.progress-title {
+  color: var(--text-muted);
+}
+
+.progress-ratio {
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #22c55e);
+  border-radius: 999px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Days List */
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.day-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.day-card.is-today {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+}
+
+.day-header {
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.4);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.day-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.day-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.today-chip {
+  background: #0284c7;
+  color: #fff;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.day-status-pill {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--bg-surface-elevated);
+  color: var(--text-muted);
+}
+
+.day-status-pill.all-done {
+  background: rgba(34, 197, 94, 0.18);
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* Routine Slots */
+.slots-container {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.routine-slot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 14px;
+  background: var(--slot-bg);
+  border: 1.5px solid var(--slot-border);
+  border-radius: var(--radius-sm);
+  color: var(--slot-text);
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.routine-slot:active {
+  transform: scale(0.985);
+}
+
+.slot-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.slot-title {
+  font-weight: 500;
+}
+
+.slot-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--text-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.slot-checkbox svg {
+  display: none;
+}
+
+/* Active State (1 clic - Green) */
+.routine-slot.is-green,
+.routine-slot.is-active {
+  background: var(--slot-active-bg-gradient);
+  border-color: var(--slot-active-border);
+  color: var(--slot-active-text);
+  box-shadow: var(--slot-active-shadow);
+}
+
+.routine-slot.is-green .slot-tag,
+.routine-slot.is-active .slot-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.routine-slot.is-green .slot-title,
+.routine-slot.is-active .slot-title {
+  font-weight: 600;
+}
+
+.routine-slot.is-green .slot-checkbox,
+.routine-slot.is-active .slot-checkbox {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.routine-slot.is-green .slot-checkbox .icon-check,
+.routine-slot.is-active .slot-checkbox .icon-check {
+  display: block;
+  stroke: #15803d;
+}
+
+/* Red State (2 clics - Rouge) */
+.routine-slot.is-red {
+  background: var(--slot-red-bg-gradient);
+  border-color: var(--slot-red-border);
+  color: var(--slot-red-text);
+  box-shadow: var(--slot-red-shadow);
+}
+
+.routine-slot.is-red .slot-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.routine-slot.is-red .slot-title {
+  font-weight: 600;
+}
+
+.routine-slot.is-red .slot-checkbox {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.routine-slot.is-red .slot-checkbox .icon-cross {
+  display: block;
+  stroke: #b91c1c;
+}
+
+/* Weekend Empty State */
+.day-card.weekend {
+  opacity: 0.75;
+}
+
+.weekend-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.btn-reset {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px dashed var(--border-color);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-reset:hover, .btn-reset:active {
+  color: #f87171;
+  border-color: #f87171;
+  background: rgba(239, 68, 68, 0.08);
+}

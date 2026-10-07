@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Routine Hebdo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="logo-title-group">
+          <img src="icons/icon.svg" alt="Logo Routine" class="app-logo">
+          <h1 class="app-title">Routine Hebdo</h1>
+        </div>
+        <div class="header-actions">
+          <button id="install-btn" class="btn-install" style="display: none;" title="Installer l'application">Installer</button>
+          <button id="today-btn" class="btn-today" title="Revenir à la semaine actuelle">Aujourd'hui</button>
+        </div>
+      </div>
+
+      <!-- Week Navigation -->
+      <div class="week-nav">
+        <button id="prev-week-btn" class="nav-arrow" aria-label="Semaine précédente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="week-info">
+          <span id="week-title" class="week-title">Semaine ...</span>
+          <span id="week-dates" class="week-dates">...</span>
+        </div>
+        <button id="next-week-btn" class="nav-arrow" aria-label="Semaine suivante">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Weekly Progress Summary -->
+      <div class="progress-card">
+        <div class="progress-labels">
+          <span class="progress-title">Progression de la semaine</span>
+          <span id="progress-ratio" class="progress-ratio">0 / 11</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Days Container -->
+    <main id="days-container" class="days-container">
+      <!-- Days rendered dynamically by JS -->
+    </main>
+
+    <!-- Footer / Reset -->
+    <footer class="app-footer">
+      <button id="reset-week-btn" class="btn-reset">Réinitialiser cette semaine</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
