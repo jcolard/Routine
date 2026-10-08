@@ -5,8 +5,8 @@ Application web mobile-first de suivi de routines hebdomadaires, minimaliste, ra
 ## ✨ Fonctionnalités
 - **Vue semaine épurée** (sans affichage des heures).
 - **Découpage des journées** :
-  - **Lundi à Jeudi** : 2 parties (*Morning routine*, *Sport routine*)
-  - **Vendredi** : 3 parties (*Morning routine*, *Sport routine*, *Friday after routine*)
+  - **Lundi à Jeudi** : 3 parties (*Morning routine*, *Sport routine*, *18h No Work*)
+  - **Vendredi** : 4 parties (*Morning routine*, *Sport routine*, *Friday after routine*, *18h No Work*)
   - **Weekend** : Repos
 - **Cycle interactif 3 états** :
   - **1 clic** : Validé (Vert ✓)

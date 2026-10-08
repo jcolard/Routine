@@ -18,14 +18,31 @@
 
   // Routine configuration per day index
   const ROUTINE_CONFIG = {
-    0: [{ id: 'morning', label: 'Morning routine', tag: 'P1' }, { id: 'sport', label: 'Sport routine', tag: 'P2' }],
-    1: [{ id: 'morning', label: 'Morning routine', tag: 'P1' }, { id: 'sport', label: 'Sport routine', tag: 'P2' }],
-    2: [{ id: 'morning', label: 'Morning routine', tag: 'P1' }, { id: 'sport', label: 'Sport routine', tag: 'P2' }],
-    3: [{ id: 'morning', label: 'Morning routine', tag: 'P1' }, { id: 'sport', label: 'Sport routine', tag: 'P2' }],
+    0: [
+      { id: 'morning', label: 'Morning routine', tag: 'P1' },
+      { id: 'sport', label: 'Sport routine', tag: 'P2' },
+      { id: 'no_work', label: '18h No Work', tag: 'P3' }
+    ],
+    1: [
+      { id: 'morning', label: 'Morning routine', tag: 'P1' },
+      { id: 'sport', label: 'Sport routine', tag: 'P2' },
+      { id: 'no_work', label: '18h No Work', tag: 'P3' }
+    ],
+    2: [
+      { id: 'morning', label: 'Morning routine', tag: 'P1' },
+      { id: 'sport', label: 'Sport routine', tag: 'P2' },
+      { id: 'no_work', label: '18h No Work', tag: 'P3' }
+    ],
+    3: [
+      { id: 'morning', label: 'Morning routine', tag: 'P1' },
+      { id: 'sport', label: 'Sport routine', tag: 'P2' },
+      { id: 'no_work', label: '18h No Work', tag: 'P3' }
+    ],
     4: [
       { id: 'morning', label: 'Morning routine', tag: 'P1' },
       { id: 'sport', label: 'Sport routine', tag: 'P2' },
-      { id: 'friday_after', label: 'Friday after routine', tag: 'P3' }
+      { id: 'friday_after', label: 'Friday after routine', tag: 'P3' },
+      { id: 'no_work', label: '18h No Work', tag: 'P4' }
     ],
     5: [], // Samedi - vide
     6: []  // Dimanche - vide
